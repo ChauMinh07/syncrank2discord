@@ -69,7 +69,7 @@ rankList:
 #========== LANGUAGE =============
 
 #Do not add space in get_roles_command_name
-get_roles_command_name: "linkaccount"
+get_roles_command_name: "getroles"
 get_roles_command_description: "Get roles with your rank in game"
 
 one_code_for_one_user_mode_msg: "Please wait until your getroles request expires to create a new request!"
