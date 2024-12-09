@@ -7,51 +7,13 @@
 #
 # ===============================================
 
-#IF true
-#ALL BELOW WILL BE IGNORE AND REPLACE BY PROXY CONFIG
-#BUNGEEMODE FEATURE DO NOT WORKING ANYMORE
-#IF YOU ENABLE, PLUGIN WILL BE GETTING ERROR
-bungeeMode: false
-
 botToken: "PASTE_YOUR_BOT_TOKEN_HERE"
 
-#Do not add space in get_roles_command_name
-get_roles_command_name: "getroles"
-get_roles_command_description: "Get roles with your rank in game"
 #They (user on discord not player) need to waiting code_expired_time before they can generate new code
 one_code_for_one_user_mode: true
-one_code_for_one_user_mode_msg: "Please wait until your getroles request expires to create a new request!"
 
-#Do not add space in options_name
-get_roles_options_name: "username_in_game"
-get_roles_options_description: "Type your Minecraft username."
-
-remove_roles_command_name: "removeroles"
-remove_roles_command_description: "Remove your roles if you has synced"
-remove_roles_success_msg: "[!] Successfully remove roles. Now, you can sync with other account"
-remove_roles_success_in_game_msg: "[!] Successfully remove roles. Now, you can sync with other account"
-remove_roles_fail_msg: "[!] Failed remove your roles. Maybe you are not synced."
-remove_roles_fail_in_game_msg: "[!] Failed remove your roles. Maybe you are not synced."
-
-offline_or_incorrect_msg: "Looks like the username you entered is not online, please connect to the server before using the command!"
-synced_reply_msg: "[!] It looks like this player has been synced or you have synced with another player. To remove, please use /removeroles on that discord account, or in-game account"
-
-#use {CODE} to display code
-#use {USER} to display who in discord sending confirm code
-#use {PLAYER} to display in game player name you has entered
-#you CAN NOT use "&" colors in discord!
-sending_success_discord_reply_msg: "Successfully sending request to player {PLAYER} in the server!"
-confirm_success_discord_reply_msg: "Congratulation! {PLAYER} has confirmed to give you roles"
 confirm_success_discord_reply_msg_mention: true
-#use {EXPIRE_TIME} to display code expiration time (minutes)
-confirm_in_game_msg: "&a{USER} is sending you request you to give his/her roles on discord. &eTo confirm, please use command /confirm {CODE}&7 (It will expire in {EXPIRE_TIME} minutes)"
-confirm_success_in_game_reply_msg: "&aYou have successfully confirmed the getroles command from {USER}"
-confirm_failed_in_game_reply_msg: "&6Your current rank do not have any roles in discord."
 
-
-code_expire_msg: "&cYour roles confirmation code has expired."
-code_null_msg: "&cDon't have any codes at the moment, please try again!"
-code_incorrect_msg: "&6The codes you entered maybe incorrect"
 #Code will be expired after SECONDS
 #This can not be infinite
 code_expire_time: 300
@@ -100,3 +62,44 @@ rankList:
     role_id: 1111111111111111111
   default:
     role_id: 0000000000000000000
+
+
+
+
+#========== LANGUAGE =============
+
+#Do not add space in get_roles_command_name
+get_roles_command_name: "linkaccount"
+get_roles_command_description: "Get roles with your rank in game"
+
+one_code_for_one_user_mode_msg: "Please wait until your getroles request expires to create a new request!"
+
+#Do not add space in options_name
+get_roles_options_name: "username_in_game"
+get_roles_options_description: "Type your Minecraft username."
+
+remove_roles_command_name: "removeroles"
+remove_roles_command_description: "Remove your roles if you has synced"
+remove_roles_success_msg: "[!] Successfully remove roles. Now, you can sync with other account"
+remove_roles_success_in_game_msg: "[!] Successfully remove roles. Now, you can sync with other account"
+remove_roles_fail_msg: "[!] Failed remove your roles. Maybe you are not synced."
+remove_roles_fail_in_game_msg: "[!] Failed remove your roles. Maybe you are not synced."
+
+offline_or_incorrect_msg: "Looks like the username you entered is not online, please connect to the server before using the command!"
+synced_reply_msg: "[!] It looks like this player has been synced or you have synced with another player. To remove, please use /removeroles on that discord account, or in-game account"
+
+#use {CODE} to display code
+#use {USER} to display who in discord sending confirm code
+#use {PLAYER} to display in game player name you has entered
+#you CAN NOT use "&" colors in discord!
+sending_success_discord_reply_msg: "Successfully sending request to player {PLAYER} in the server!"
+confirm_success_discord_reply_msg: "Congratulation! {PLAYER} has confirmed to give you roles"
+
+#use {EXPIRE_TIME} to display code expiration time (minutes)
+confirm_in_game_msg: "&a{USER} is sending you request you to give his/her roles on discord. &eTo confirm, please use command /confirm {CODE}&7 (It will expire in {EXPIRE_TIME} minutes)"
+confirm_success_in_game_reply_msg: "&aYou have successfully confirmed the getroles command from {USER}"
+confirm_failed_in_game_reply_msg: "&6Your current rank do not have any roles in discord."
+
+code_expire_msg: "&cYour roles confirmation code has expired."
+code_null_msg: "&cDon't have any codes at the moment, please try again!"
+code_incorrect_msg: "&6The codes you entered maybe incorrect"
